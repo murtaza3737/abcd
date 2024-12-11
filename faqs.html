@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Graphic Design Services</title>
+    <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        /* Mobile Navbar */
+        @media (max-width: 768px) {
+            .navbar a {
+                display: none;
+            }
+
+            .navbar.active a {
+                display: block;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        /* FAQ Section Styles */
+        .faq-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .faq-answer {
+            font-size: 1em;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007BFF;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-question:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <a href="main.html">Home</a>
+        <a href="m.html">Services</a>
+        <a href="form.html">Contact  </a>    
+	
+	<a href="faqs.html">FAQs</a>
+	</div>
+        
+
+    <!-- FAQ Section -->
+  
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+            <h2 class="faq-question">1. What is our design process?</h2>
+            <p class="faq-answer">We work closely with clients to understand their requirements and ideas. After gathering specifications, we provide initial concepts and work together with the client to refine the designs until satisfaction is achieved.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h2 class="faq-question">2. How long does it take to complete a project?</h2>
+            <p class="faq-answer">The timeline depends on the complexity of the design. Simple projects may take a few days, while more intricate designs may take a week or more. We provide an estimated timeline after discussing the project with the client.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">3. Do you offer revisions?</h2>
+            <p class="faq-answer">Yes, we offer revisions to ensure the final design meets your expectations. We work closely with you during the process to ensure your vision is fully realized.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">4. What types of design services do you provide?</h2>
+            <p class="faq-answer">We provide a variety of design services including logo design, branding, business cards, banners, flyers, typography design, vector illustrations, and more.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2 class="faq-question">5. How much do your services cost?</h2>
+            <p class="faq-answer">Our pricing is based on the complexity and scope of the project. We offer affordable rates while ensuring high-quality designs. Please contact us for a custom quote based on your project needs.</p>
+        </div>
+    </section>
+    
+    <script>
+        // JavaScript to toggle FAQ answers
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // JavaScript to toggle mobile navbar menu
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
